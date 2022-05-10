@@ -34,6 +34,10 @@ static const Rule rules[] = {
 	{ "firefox",	NULL,		NULL,	2,		0,		0 },
 	{ "KeepassXC",	NULL,		NULL,	3,		0,		0 },
 	{ "keepassxc",	NULL,		NULL,	3,		0,		0 },
+	{ "Seahorse",	NULL,		NULL,	3,		0,		0 },
+	{ "seahorse",	NULL,		NULL,	3,		0,		0 },
+	{ "dino",	NULL,		NULL,	3,		0,		0 },
+	{ "Dino",	NULL,		NULL,	3,		0,		0 },
 }; 
 
 /* layout(s) */
@@ -95,7 +99,8 @@ static const char *cmusnext[]	= { "/bin/sh", "-c", "cmus-remote -n &", NULL };
 static const char *boorucmd[]	= { "atsugami", NULL };
 static const char *gladecmd[]	= { "glade", NULL };
 static const char *pdfcmd[]	= { "zathura", NULL };
-static const char *keecmd[]	= { "keepassxc", NULL };
+//static const char *keecmd[]	= { "keepassxc", NULL };
+static const char *keecmd[]	= { "seahorse", NULL };
 
 static Key keys[] = {
 	/* modifier                     key				function        argument
@@ -133,11 +138,9 @@ static Key keys[] = {
 	{ 0,				XF86XK_AudioLowerVolume,	spawn,		{.v = voldwncmd	} },
 	{ 0,				XF86XK_AudioRaiseVolume,	spawn,		{.v = volupcmd	} },
 	{ 0,				XF86XK_AudioMute,		spawn,		{.v = volmtecmd	} },
-	{ 0,				XF86XK_AudioMicMute,		spawn,		{.v = micmtecmd	} },
+//	{ 0,				XF86XK_AudioMicMute,		spawn,		{.v = micmtecmd	} },
 	{ 0,				XF86XK_MonBrightnessUp,		spawn,		{.v = brtupcmd	} },
 	{ 0,				XF86XK_MonBrightnessDown,	spawn, 		{.v = brtdwncmd	} },
-	{ 0,				XF86XK_KbdBrightnessUp,		spawn,		{.v = brtupcmd	} },
-	{ 0,				XF86XK_KbdBrightnessDown,	spawn, 		{.v = brtdwncmd	} },
 	{ 0,				XK_Print, 			spawn,		{.v = prntcmd	} },
 	{ 0,				XK_Sys_Req,			spawn,		{.v = prntfocmd	} },
 	{ MODKEY,			XK_Print,			spawn,		{.v = prntfocmd	} },
